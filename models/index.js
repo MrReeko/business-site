@@ -8,7 +8,7 @@ var path = process.env.key_path
 function getClient() {
   try {
     // content = fs.readFileSync(__dirname + path)
-    var content = process.env.keyFile
+    var content = process.env.keyFile.replace(/\\n/g, '\n')
   } catch(err) {
     return console.log('Error loading client secret file:', err);
   }
