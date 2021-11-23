@@ -21,7 +21,7 @@ function authorize(credentials) {
     } catch(err) {
       return getNewToken(oAuth2Client, callback);
     }
-    oAuth2Client.setCredentials(JSON.parse(token));
+    oAuth2Client.setCredentials(JSON.parse(token.replace(/\\n/g, '\n')));
     return oAuth2Client;
   }
 
