@@ -46,13 +46,15 @@ async function sendMail(formObj) {
   .replace(/\//g, '_')
   .replace(/=+$/, '');
   try {
+    console.log('Making request to gmail...')
     const res = await gmail.users.messages.send({
       userId: 'me',
       requestBody: {
         raw: encodedMessage,
       },
     });
-    console.log(res.data);
+    console.log('Response from gmail: ')
+    console.log(res);
     return res.data;
   } catch(err) {
     console.log('An Error occurred sending email...')
