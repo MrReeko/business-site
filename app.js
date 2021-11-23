@@ -39,6 +39,8 @@ app.get('/contact', function(req, res) {
 app.post('/contact', function(req, res) {
     var {name, email, phone, message} = req.body;
     var formObj = {name: name, email: email, phone: phone, message: message}
+    console.log('sending Form: ')
+    console.log(formObj);
     sendMail(formObj)
     .then((success) => {
         req.flash('alertName', 'alert-success');
