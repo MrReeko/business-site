@@ -13,7 +13,7 @@ function getClient() {
     return console.log('Error loading client secret file:', err);
   }
   // Authorize a client with credentials
-  var client = authorize(JSON.parse(content));
+  var client = authorize(content);
   return client;
 }
 
