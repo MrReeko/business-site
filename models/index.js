@@ -18,6 +18,8 @@ function getClient() {
 }
 
 async function sendMail(formObj) {
+  console.log('sending mail...');
+  console.log(formObj);
   // Remove ` before running
   formObj.name = formObj['name'].replace(/`/g, '');
   formObj.email = formObj['email'].replace(/`/g, '');
@@ -50,6 +52,7 @@ async function sendMail(formObj) {
         raw: encodedMessage,
       },
     });
+    console.log(res.data);
     return res.data;
   } catch(err) {
     throw new Error(err);
