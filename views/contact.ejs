@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <%- include('partials/head') %>
+        <title>Contact|Laura Rea</title>
+</head>
+
+<body>
+    <%- include('partials/nav') %>
+        <!-- Page Content -->
+        <div class="hero-background hero-contact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="hero-title">Contact</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page Content -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-4">
+                    <div class="contact-info">
+                        <p id="contact-name" class="content-h1">Laura Rea AMFT</p>
+                        <p>Santa Clara & Santa Cruz County</p>
+                        <p>Telehealth appointments available</p>
+                        <br>
+                        <p>
+                        <h5>Telephone</h5>
+                        </p>
+                        <p>(669) 232-3679</p>
+                        <br>
+                        <p>
+                        <h5>Email</h5>
+                        </p>
+                        <p>laurareaamft@gmail.com</p>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-6 contactform-col">
+                    <p class="contact-message">How can I help you?</p>
+                    <p class="contact-text"> Research suggests that the best predictor for success in therapy is the fit
+                        you
+                        experience with your therapist, regardless of their approach. Through an initial phone
+                        consultation,
+                        you can begin to assess whether I might be a good fit for your journey.</p>
+
+                    <div class="contact-container">
+                        <div>
+                            <h4>
+                                <span>Send a Message</span>
+                            </h4>
+                            <div>
+                                <% if (message.text.length > 0) { %>                                     
+                                    <div class="alert <%= message.alertName %>" role="alert">
+                                        <%= message.text %>
+                                    </div>
+                                <% } %>
+                                <form action="/contact" method="post">
+                                    <div>
+                                        <label for="name">Name <span>*</span></label>
+                                        <input type="text" name="name" required>
+                                    </div>
+                                    <div>
+                                        <label for="email">Email <span>*</span></label>
+                                        <input type="email" name="email" required>
+                                    </div>
+                                    <div>
+                                        <label for="phone">Phone <span>*</span></label>
+                                        <input type="tel" name="phone" required>
+                                    </div>
+                                    <div>
+                                        <label for="message">Message <span>*</span> </label>
+                                        <textarea name="message"></textarea required>
+                                    </div>
+                                    <div>
+                                        <input id="contact-button" name="submit" type="submit" value="Submit">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <%- include('partials/footer') %>
+</body>
+
+</html>

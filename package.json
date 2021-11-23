@@ -1,0 +1,29 @@
+{
+  "name": "business-site",
+  "version": "1.0.0",
+  "description": "therapy site for laura",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrReeko/business-site.git"
+  },
+  "author": "Steven Trager",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrReeko/business-site/issues"
+  },
+  "homepage": "https://github.com/MrReeko/business-site#readme",
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "googleapis": "^39.2.0"
+  }
+}
