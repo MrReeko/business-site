@@ -48,6 +48,8 @@ app.post('/contact', function(req, res) {
         res.redirect('/contact');
     })
     .catch((err) => {
+        console.log('Error submitting form: ')
+        comsole.log(err);
         req.flash('alertName', 'alert-danger');
         req.flash('text', 'Something went wrong. Please reach out to Laura at laurareaamft@gmail.com.');
         res.redirect('/contact');
