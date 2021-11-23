@@ -52,6 +52,6 @@ app.post('/contact', function(req, res) {
     });
 });
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 5000, () => {
     console.log(`Laura's site is listening on port ${port}`)
 });
