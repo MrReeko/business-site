@@ -55,6 +55,8 @@ async function sendMail(formObj) {
     console.log(res.data);
     return res.data;
   } catch(err) {
+    console.log('An Error occurred sending email...')
+    console.log(err);
     throw new Error(err);
   }
 }
